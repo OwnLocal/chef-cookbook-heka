@@ -14,7 +14,7 @@ if platform?("debian", "ubuntu")
 	Chef::Log.debug("Desired version of heka: #{node['heka']['download']['version']}")
 	
 	# Compare currently installed to desired installed based on attributes.
-	if heka_version < node['heka']['download']['version']
+	if heka_version != node['heka']['download']['version']
 
 		Chef::Log.info("Installing latest Heka from #{node["heka"]["download"]["remote_src"]}")
 
