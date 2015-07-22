@@ -53,7 +53,7 @@ if platform?("debian", "ubuntu")
 	end
 
 	service "heka" do
-		action [ :enable , :start ]
+		action [ :enable , :restart ]
 		provider Chef::Provider::Service::Upstart
 	end
 
