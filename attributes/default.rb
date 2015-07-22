@@ -3,8 +3,8 @@
 # Attribute:: default
 #
 
-default['heka']['download']['mirror'] = 'https://github.com/mozilla-services/heka/releases/download/v'
-default['heka']['download']['version'] = '0.9.2'
+default['heka']['download']['mirror'] = 'http://ownlocal-debs.s3-website-us-east-1.amazonaws.com/heka'
+default['heka']['download']['version'] = '0.9.2-28'
 default['heka']['download']['arch'] = 'amd64'
 default['heka']['download']['extension'] = 'deb'
 default['heka']['download']['remote_src'] = "#{node['heka']['download']['mirror']}#{node['heka']['download']['version']}/heka_#{node['heka']['download']['version']}_#{node['heka']['download']['arch']}.#{node['heka']['download']['extension']}"
